@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "bist-warning-bot"
+version = "0.1.0"
+description = "BIST signal, reporting and shadow portfolio simulation bot"
+authors = ["Senior Python Engineer <engineer@example.com>"]
+readme = "README.md"
+packages = [{ include = "bot", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.14.3"
+pandas = "^2.3.0"
+numpy = "^2.1.0"
+pandas-ta = "^0.3.14b"
+apscheduler = "^3.10.4"
+pydantic = "^2.11.7"
+tenacity = "^9.0.0"
+yfinance = "^0.2.58"
+python-telegram-bot = "^21.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
